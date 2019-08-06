@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Jest One Test",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/@ofm/build-tool/scripts/test.js",
+            "stopOnEntry": false,
+            "args": ["${fileBasename}", "--runInBand"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "integratedTerminal",
+            "sourceMaps": true
+        },
+    ]
+}
